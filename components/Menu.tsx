@@ -121,8 +121,8 @@ export default function Menu(props: Props) {
                 Work
               </a>
             </Link>
-            <Link href="/about">
-              <a className={`link w-max ${pathname === '/about' && 'active'}`}>
+            <Link href="/studio">
+              <a className={`link w-max ${pathname === '/studio' && 'active'}`}>
                 Studio
               </a>
             </Link>
