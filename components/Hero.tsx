@@ -31,9 +31,14 @@ const item = {
   },
 }
 
-const images = ['hero-1.jpeg', 'hero-2.jpeg']
+const homePageImages = ['home/hero-1.jpeg', 'home/hero-2.jpeg']
 
-export default function Hero() {
+interface Props {
+  images?: string[]
+}
+
+export default function Hero(props: Props) {
+  const { images = homePageImages } = props
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
@@ -59,7 +64,7 @@ export default function Hero() {
       <motion.div variants={item} className="relative h-screen w-full">
         <Image
           className="object-cover"
-          src={`/images/hero/${images[currentIndex]}`}
+          src={`/images/${images[currentIndex]}`}
           alt="Home Hero"
           layout="fill"
           priority
