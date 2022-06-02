@@ -1,0 +1,35 @@
+@layer utilities {
+  .py-base {
+    @apply py-6 xl:py-16;
+  }
+
+  .px-base {
+    @apply px-8 xl:px-28;
+  }
+
+  .my-base {
+    @apply my-8 sm:my-14 md:my-20;
+  }
+
+  .debug-screens::before {
+		@apply rounded shadow-none text-white bg-gray-900 m-4 opacity-100 p-2;
+	}
+
+  @variants responsive {
+    .masonry {
+      gap: 2em;
+      column-count: 1;
+    }
+    .masonry-sm {
+      gap: 2em;
+      column-count: 2;
+    }
+    .masonry-md {
+      gap: 2em;
+      column-count: 3;
+    }
+    .break-inside {
+      break-inside: avoid;
+    }
+  }
+}
