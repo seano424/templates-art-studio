@@ -43,14 +43,14 @@ export default function VerticalGallery(props: Props) {
     <section>
       {images.map((image, i) => (
         <Link key={i} href={image.link}>
-          <a className="container block relative h-[400px] lg:h-[600px] xl:h-[800px] w-full cursor-pointer">
+          <a className="flex relative aspect-[1.8] cursor-pointer mx-5 my-20 sm:mx-20">
             <Image
               className="object-cover object-center"
               src={image.url}
               alt="Image for Section"
               layout="fill"
             />
-            <h2 className="h2 absolute pl-20 inset-0 flex items-center text-white">
+            <h2 className="hidden h2 absolute pl-20 inset-0 items-center text-white sm:flex">
               {image.title}
             </h2>
           </a>

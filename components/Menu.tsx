@@ -65,7 +65,7 @@ export default function Menu(props: Props) {
     <div ref={menuRef}>
       <AnimatePresence exitBeforeEnter>
         <ul
-          className="cursor-pointer z-50 h-20 w-20 flex justify-center items-center select-none fixed top-10 left-10"
+          className="cursor-pointer z-50 h-20 w-20 flex justify-center items-center select-none fixed top-4 left-10"
           onMouseEnter={handleEnter}
           onMouseLeave={handleLeave}
           onClick={handleClick}
